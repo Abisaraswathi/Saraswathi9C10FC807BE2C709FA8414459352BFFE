@@ -1,10 +1,12 @@
-def fact_rect(n):
-  if n == 0 or n == 1:
-    return 1
-  else:
-    return n * fact_rect(n - 1)
-
-
-number = int(input("Enter the number:"))
-res = fact_rect(number)
-print("The Factorial of {} is {}".format(number, res))
+#write a program that determines whether a year entered by the user is leap year or not using if-elif-else statements
+input_year = int(input("Enter the Year to be checked: "))
+if(input_year%4 == 0):
+    if(input_year%100 == 0):
+        if(input_year%400 == 0):
+            print("%d is Leap Year" %input_year)
+        else:
+            print("%d is Not the Leap Year" %input_year)
+    else:
+        print("%d is Leap Year" %input_year)
+else:
+    print("%d is Not the Leap Year" %input_year)   
